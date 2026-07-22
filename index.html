@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Website</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .card {
+      max-width: 500px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: royalblue;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>Welcome to My Website</h1>
+    <p id="message">Click the button for a random message.</p>
+    <button onclick="changeMessage()">Click Me</button>
+  </div>
+
+  <script>
+    function changeMessage() {
+      const messages = [
+        "You are doing great!",
+        "HTML is fun!",
+        "Keep building cool things!",
+        "A penguin stole your Wi-Fi.",
+        "This message was randomly selected."
+      ];
+
+      const randomNumber = Math.floor(Math.random() * messages.length);
+      document.getElementById("message").textContent = messages[randomNumber];
+    }
+  </script>
+</body>
+</html>
